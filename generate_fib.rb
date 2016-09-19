@@ -6,7 +6,7 @@
 
 def generate_fib(n)
   # give it something to work from
-	arr = [0, 1]
+  arr = [0, 1]
 
   # check for and handle wonky inputs
   if n.nil? || n <= -1
