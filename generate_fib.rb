@@ -9,7 +9,7 @@ def generate_fib(n)
   arr = [0, 1]
 
   # check for and handle wonky inputs
-  if n.nil? || n <= -1
+  if !n.is_a?(Integer) || n <= -1
     puts "Whoops: Input n = #{n} is invalid; n must be an integer >= 0."
     return
   elsif n <= arr.length
@@ -28,6 +28,7 @@ def generate_fib(n)
 end
 
 # some general proof of concept
-print generate_fib(1), "\n"
+print generate_fib(2), "\n"
 print generate_fib(-2)
 print generate_fib(14), "\n"
+print generate_fib('abc')
