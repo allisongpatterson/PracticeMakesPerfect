@@ -10,7 +10,7 @@ function generate_fib(n) {
 
   // check for and handle wonky inputs
   try {
-    if (n == null || n <= -1) {
+    if (Number.isInteger(n) == false || n <= -1) {
       throw `Whoops: Input n = ${n} is invalid; n must be an integer >= 0.`;
     };
   }
@@ -35,6 +35,7 @@ function generate_fib(n) {
 };
 
 // some general proof of concept
-console.log( generate_fib(1) );
+console.log( generate_fib(2) );
 console.log( generate_fib(-2) );
 console.log( generate_fib(14) );
+console.log( generate_fib('abc') );
